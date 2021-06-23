@@ -18,7 +18,7 @@ public class NavDrawerRVAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     private LayoutInflater inflater;
     private OnItemClickListener onItemClickListener;
     private List<DrawerItem> list;
-    public static final int ACTIVITY_TYPE = 1, CALL_TYPE = 2, SHARE_TYPE = 3, OPEN_SOCIAL_MEDIA = 4;
+    public static final int ACTIVITY_TYPE = 1, CALL_TYPE = 2, SHARE_TYPE = 3, OPEN_SOCIAL_MEDIA = 4, CLOSE_APP = 5;
 
     public NavDrawerRVAdapter(Context context) {
         this.context = context;
@@ -27,9 +27,10 @@ public class NavDrawerRVAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
 
         list.add(new DrawerItem(R.drawable.what, OPEN_SOCIAL_MEDIA, "مشاوره آنلاین رایگان", false, "https://wa.me/989044945577"));
         list.add(new DrawerItem(R.drawable.call, CALL_TYPE, "تماس با ما", false, "+982122874423"));
-        list.add(new DrawerItem(R.drawable.insta, OPEN_SOCIAL_MEDIA, "اینستاگرام", false,
+        list.add(new DrawerItem(R.drawable.insta, OPEN_SOCIAL_MEDIA, "Instagram", false,
                 "https://instagram.com/peyvandeyaran?utm_medium=copy_link"));
-        list.add(new DrawerItem(R.drawable.pin, OPEN_SOCIAL_MEDIA, "پینترست", false, "https://pin.it/2quUd5m"));
+        list.add(new DrawerItem(R.drawable.pin, OPEN_SOCIAL_MEDIA, "Pinterest", false, "https://pin.it/2quUd5m"));
+        list.add(new DrawerItem(R.drawable.ic_baseline_close_24, CLOSE_APP,"خروج", false,"close"));
 //        list.add(new DrawerItem(R.drawable.ic_launcher_background, SHARE_TYPE, "اشتراک گذاری", false, "متن اشتراک گزاری"));
 
 //        list.add(new DrawerItem(R.drawable.ic_launcher_background, CALL_TYPE, "مشاوره آنلاین رایگان", false, "09111111111"));

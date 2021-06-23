@@ -11,6 +11,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -22,6 +23,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -44,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         webView = findViewById(R.id.webView);
         if (!isConnected(this)) {
             showCustomDialogue();
+            webView.destroy();
         }
 
         webView.getSettings().getJavaScriptEnabled();
@@ -53,14 +56,18 @@ public class MainActivity extends AppCompatActivity {
         webView.loadUrl("https://peyvandeyaran.ir/aqdino");
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
+        webSettings.setAppCacheEnabled(true);
+        webSettings.setDomStorageEnabled(true);
+        webSettings.setDatabaseEnabled(true);
         initView();
         onClick();
+
 
     }
 
     private void showCustomDialogue() {
         ImageView image = new ImageView(this);
-        image.setImageResource(R.drawable.logoc);
+        image.setImageResource(R.drawable.nett);
         AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
 
         builder.setView(image)
@@ -106,6 +113,8 @@ public class MainActivity extends AppCompatActivity {
             super.onPageFinished(view, url);
 //            Toast.makeText(MainActivity.this, "Finish", Toast.LENGTH_SHORT).show();
         }
+
+
     }
 
     private void onClick() {
@@ -194,6 +203,11 @@ public class MainActivity extends AppCompatActivity {
 
                     case NavDrawerRVAdapter.OPEN_SOCIAL_MEDIA:
                         socialCheck(item.getOutput());
+                        break;
+
+                    case NavDrawerRVAdapter.CLOSE_APP:
+//                            finish();
+                        System.exit(0);
                         break;
 
                 }

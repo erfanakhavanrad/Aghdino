@@ -31,25 +31,25 @@
                     android:id="@+id/tv_name"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:layout_marginEnd="16dp"
-                    android:background="@color/white"
-                    android:src="@drawable/logot"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="4dp"
+                    android:src="@drawable/menulogo"
                     android:textColor="@color/white"
                     android:textSize="18sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent" />
 
-                <TextView
-                    android:id="@+id/tv_mobile"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginEnd="28dp"
-                    android:text="سامانه عقدینو"
-                    android:textColor="@color/white"
-                    android:textSize="17sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_name" />
+                <!--                <TextView-->
+<!--                    android:id="@+id/tv_mobile"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="16dp"-->
+<!--                    android:layout_marginEnd="28dp"-->
+<!--                    android:text="سامانه عقدینو"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="17sp"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintTop_toBottomOf="@+id/tv_name" />-->
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>
@@ -65,12 +65,12 @@
                 android:id="@+id/author"
                 android:layout_width="match_parent"
                 android:layout_height="20dp"
-              android:gravity="right|bottom"
+              android:gravity="center|bottom"
                 android:layout_below="@+id/rv_drawer_menu"
                 android:layout_alignParentBottom="true"
                 android:layout_marginBottom="0dp"
-                android:text="طراحی: عرفان اخوان راد"
-                android:textSize="11sp"
+                android:text="Designed by: Erfan Akhavan Rad"
+                android:textSize="9sp"
                 android:paddingRight="7dp"
                 android:paddingBottom="7dp"
                 />
